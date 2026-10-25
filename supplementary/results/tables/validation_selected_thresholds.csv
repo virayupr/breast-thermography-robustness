@@ -1,0 +1,4 @@
+model,threshold,sensitivity,specificity
+ResNet18,0.58104104,0.6666666666666666,0.9166666666666666
+MobileNetV3-Small,0.38308248,0.5,0.8333333333333334
+EfficientNet-B0,0.38807797,1.0,0.25
