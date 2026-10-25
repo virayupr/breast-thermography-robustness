@@ -27,3 +27,10 @@ run_logs/
 *patient*prediction*.csv
 *patient*metadata*.csv
 *patient*split*.csv
+
+# Licensed private thermography source data (never publish)
+**/Diagnostics.xlsx
+**/Breast Thermography*.zip
+**/Breast Thermography/
+**/dataset_with_patient_split.csv
+**/*patient*prediction*.csv
