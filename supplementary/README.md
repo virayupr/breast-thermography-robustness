@@ -1,22 +1,32 @@
-# ICVGIP 2026 supplementary reproducibility materials
+# ICVGIP 2026 — Supplementary materials
 
-**Paper:** Beyond Clean Accuracy: Operating-Point Fragility under Image-Quality Shift in Breast Thermography  
-**Authors:** Rajeswari Kannan and Vivekanandan N  
-**Status:** Accepted ICVGIP 2026 paper.
+**Accepted paper:** Beyond Clean Accuracy: Operating-Point Fragility under Image-Quality Shift in Breast Thermography  
+**Authors:** Rajeswari Kannan and Vivekanandan N
 
-This folder is reserved for the original experiment notebook and exported aggregate results. The prepared supplementary archive has **not yet been uploaded to this GitHub repository**. Do not cite this folder as a complete replication package until the files are uploaded and verified.
+## Available in this repository
 
-## Intended files
+- [Original experimental Colab notebook](../breast-thermography-robustness.ipynb) — original author code, with historical execution outputs; inspect before running
+- [Clean vs quality-aware comparison](../clean_vs_quality_aware_comparison.csv)
+- [Multi-seed degradation summary](../multi_seed_degradation_summary.csv)
+- [Quality-augmented multi-seed summary](../quality_augmented_multiseed_summary.csv)
+- [Calibration summary](../final_calibration_summary.csv)
+- [Validation-selected thresholds](../validation_selected_thresholds.csv)
+- [Multi-seed AUC plot](../multiseed_auc_degradation.png)
+- [EfficientNet probability-shift plot](../efficientnet_b0_probability_shift.png)
+- [MobileNetV3 probability-shift plot](../mobilenetv3_small_probability_shift.png)
+- [ResNet-18 probability-shift plot](../resnet18_probability_shift.png)
+- Additional figures and the patient-split CSV are in the root; see the GitHub file listing.
 
-- `notebooks/ICVGIP_original_code_outputs_removed.ipynb` — original research notebook with execution outputs removed
-- `results/tables/` — 16 aggregate CSV tables
-- `results/figures/` — seven experimental figures
-- `requirements.txt`, `AUDIT.md`, `REPRODUCIBILITY.md`, `DATA_AVAILABILITY.md`, and provenance/checksum records
+## Documentation
 
-## Reproducibility caveats
+- [Reproducibility instructions](REPRODUCIBILITY.md)
+- [Data availability and privacy](DATA_AVAILABILITY.md)
+- [Audit and limitations](AUDIT.md)
 
-The source notebook contains Google Colab/Drive-specific paths and repeated setup cells. In particular, **inspect the notebook before execution**: a setup cell removes a stale `/content/drive` directory with `shutil.rmtree`. Run only in an isolated environment after reviewing that operation.
+## Status and important limitations
 
-The raw dataset, trained checkpoints, and patient-level prediction records are not part of the prepared public package. Dependencies are inferred rather than environment-locked. A fresh end-to-end rerun has not been verified. The dataset license and privacy requirements must be reviewed before adding further files.
+The repository contains substantive original research code and results, but it is **not a fully verified replication release**. The author's separate prepared local archive contains more aggregate CSVs and figures than are presently visible on GitHub. Exact software versions, a fresh end-to-end rerun and privacy/licensing review remain outstanding.
 
-Do not interpret the reported results as clinical validation; the held-out test cohort consists of 18 patients, including five malignant cases.
+The existing public `dataset_with_patient_split.csv` requires a privacy and dataset-license review. No clinical efficacy is claimed; the test cohort is small, and quality shifts were simulated.
+
+**Repository URL:** https://github.com/virayupr/breast-thermography-robustness
