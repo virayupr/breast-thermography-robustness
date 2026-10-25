@@ -16,6 +16,6 @@ Additional original results remain at the repository root. The author's prepared
 
 ## Important limitations
 
-This is an archival code-and-results supplement, not a clean-room reproducibility certification. The notebook contains Google Drive paths and an operation involving `shutil.rmtree`; review all cells before running. No raw patient images or trained checkpoints are supplied. The public root-level `dataset_with_patient_split.csv` still needs a redistribution/privacy review. The test set is small and quality degradations were simulated.
+This is an archival code-and-results supplement, not a clean-room reproducibility certification. The notebook contains Google Drive paths and an operation involving `shutil.rmtree`; review all cells before running. No raw patient images or trained checkpoints are supplied. The patient-level split CSV has been removed from the current branch; older Git history may still contain it. The test set is small and quality degradations were simulated.
 
 **Repository:** https://github.com/virayupr/breast-thermography-robustness
