@@ -1,87 +1,29 @@
-# breast-thermography-robustness
-Code for evaluating architecture-dependent robustness and quality-aware learning in breast thermography under controlled image-quality degradation.
-# Beyond Clean Accuracy: Architecture-Dependent Robustness and Quality-Aware Learning for Breast Thermography
+# Beyond Clean Accuracy: Operating-Point Fragility under Image-Quality Shift in Breast Thermography
 
-This repository contains the implementation and experimental code for the paper:
+**ICVGIP 2026 — accepted paper**  
+**Authors:** Rajeswari Kannan and Vivekanandan N
 
-**"Beyond Clean Accuracy: Architecture-Dependent Robustness and Quality-Aware Learning for Breast Thermography"**
+This repository archives the authors' research code, experimental figures, and aggregate evaluation results for breast thermography classification under simulated image-quality degradation. The study examines the fragility of fixed decision thresholds across architectures and evaluates quality-aware training.
 
-Submitted to ICVGIP 2026.
+## Supplementary material
 
-## Overview
+- [Supplementary index](supplementary/README.md)
+- [Original experimental notebook](supplementary/notebooks/original_author_notebook.ipynb)
+- [Published aggregate tables](supplementary/results/tables)
+- [Published figures](supplementary/results/figures)
+- [Verification script](supplementary/verify_aggregate_results.py)
+- [Reproducibility guidance](supplementary/REPRODUCIBILITY.md)
+- [Data availability and privacy notes](supplementary/DATA_AVAILABILITY.md)
+- [Limitations and audit](supplementary/AUDIT.md)
 
-This work investigates the robustness of deep-learning models for breast
-thermography classification under controlled image-quality degradation.
+The original research files remain at the repository root for historical continuity. This is an experimental archive, **not a claim of independent end-to-end numerical reproduction**. Some supplementary CSVs and figures from the local archive have not yet been uploaded to GitHub.
 
-The evaluated architectures are:
+## Research scope and limitations
 
-- ResNet-18
-- MobileNetV3-Small
-- EfficientNet-B0
+Experiments use a patient-disjoint split, three deep-learning architectures, fixed validation-selected operating thresholds, multiple stochastic quality-shift seeds, and quality-aware learning. The held-out test cohort includes 18 patients (five malignant); results are exploratory and not clinical validation.
 
-The robustness experiments consider four image-quality conditions:
-
-- Original
-- Mild
-- Moderate
-- Severe
-
-Controlled degradation includes resolution reduction, Gaussian blur,
-additive Gaussian noise, and contrast reduction.
-
-## Dataset
-
-Experiments use the publicly available breast thermography dataset
-introduced by Rodriguez-Guerrero et al. (2024).
-
-The dataset contains:
-
-- 119 patients
-- 84 benign cases
-- 35 malignant cases
-- 357 thermographic images
-- Three views per patient
-
-A strictly patient-disjoint training/validation/test split is used.
-
-## Evaluation
-
-Models are evaluated using patient-level:
-
-- ROC-AUC
-- Accuracy
-- Sensitivity
-- Specificity
-- Precision
-- F1-score
-- Brier score
-- Expected Calibration Error (ECE)
-
-Patient-level predictions are obtained by averaging the malignant
-probabilities from the three thermographic views.
-
-For degraded conditions, experiments are repeated across 20 stochastic
-corruption realizations on the same fixed test cohort.
-
-Patient-level bootstrap confidence intervals are used to quantify
-sampling uncertainty for clean-test ROC-AUC.
-
-## Quality-Aware Training
-
-The repository also includes experiments evaluating quality-aware
-training for ResNet-18 and MobileNetV3-Small.
-
-## Reproducibility
-
-The main experimental workflow is provided in:
-
-`breast_thermography_robustness.ipynb`
-
-The notebook includes data preparation, patient-disjoint splitting,
-model training, controlled degradation, patient-level inference,
-robustness evaluation, calibration analysis, and bootstrap confidence
-interval estimation.
+**Data caution:** The historical root-level `dataset_with_patient_split.csv` includes source patient IDs and machine-specific paths. Redistribution permission should be verified; avoid copying this file into new public releases without review. Raw thermography images and model checkpoints are not distributed.
 
 ## Citation
 
-Citation information will be added after publication.
+Please cite the associated ICVGIP 2026 paper. Citation metadata is in [CITATION.cff](CITATION.cff).
