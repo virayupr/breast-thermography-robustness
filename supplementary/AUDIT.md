@@ -10,6 +10,6 @@
 
 - Clean-room notebook execution from beginning to end.
 - Exact package versions, pretrained checkpoint availability, dataset permissions, and numerical reproduction of all tables.
-- Public sharing permissions for the already uploaded patient-split CSV.
+- Historical Git exposure and redistribution permissions for the removed patient-split CSV.
 
 The full local author-prepared archive contains 16 aggregate CSV tables and seven figures, but this GitHub audit does **not** assert that all those assets are uploaded. Do not represent this repository as fully reproduced or privacy-cleared.
