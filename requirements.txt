@@ -1,9 +1,10 @@
-torch
-torchvision
+# Package names inferred from notebook imports; exact versions unverified
 numpy
 pandas
+scipy
 scikit-learn
 matplotlib
 Pillow
-opencv-python
+torch
+torchvision
 openpyxl
