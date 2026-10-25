@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code or the aggregate results, please cite the associated ICVGIP 2026 paper."
+title: "Beyond Clean Accuracy: Operating-Point Fragility under Image-Quality Shift in Breast Thermography"
+type: software
+authors:
+  - family-names: Kannan
+    given-names: Rajeswari
+  - family-names: N
+    given-names: Vivekanandan
+repository-code: "https://github.com/virayupr/breast-thermography-robustness"
