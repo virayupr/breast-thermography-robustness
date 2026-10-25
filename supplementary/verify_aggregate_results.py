@@ -32,7 +32,7 @@ def verify(prefix):
             assert np.isfinite(x).all(), f"Nonfinite {metric}: {key}"
             for field, expected in (("mean", x.mean()), ("std", x.std(ddof=1))):
                 observed = float(row[f"{metric}_{field}"])
-                assert np.isclose(observed, expected, rtol=1e-4, atol=1e-4), (
+                assert ((np.isnan(observed) and np.isnan(expected)) or np.isclose(observed, expected, rtol=1e-4, atol=1e-4)), (
                     f"{prefix} {key} {metric}_{field}: reported={observed}, computed={expected}")
     assert seen == set(grouped.groups), "Missing or extra summary groups"
     print(f"PASS {prefix}: {len(raw)} seed-level rows, {len(summary)} summary groups")
