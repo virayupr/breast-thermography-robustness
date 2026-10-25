@@ -1,0 +1,10 @@
+# Package names inferred from notebook imports; exact versions unverified
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+Pillow
+torch
+torchvision
+openpyxl

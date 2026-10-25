@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "Please cite the associated ICVGIP 2026 paper when using these research materials."
+title: "Supplementary materials for Beyond Clean Accuracy: Operating-Point Fragility under Image-Quality Shift in Breast Thermography"
+type: software
+authors:
+  - family-names: Kannan
+    given-names: Rajeswari
+  - family-names: N
+    given-names: Vivekanandan
+keywords:
+  - breast thermography
+  - image-quality shift
+  - operating-point robustness
+  - reproducibility
