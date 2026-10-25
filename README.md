@@ -22,7 +22,7 @@ The original research files remain at the repository root for historical continu
 
 Experiments use a patient-disjoint split, three deep-learning architectures, fixed validation-selected operating thresholds, multiple stochastic quality-shift seeds, and quality-aware learning. The held-out test cohort includes 18 patients (five malignant); results are exploratory and not clinical validation.
 
-**Data caution:** The historical root-level `dataset_with_patient_split.csv` includes source patient IDs and machine-specific paths. Redistribution permission should be verified; avoid copying this file into new public releases without review. Raw thermography images and model checkpoints are not distributed.
+**Data caution:** The historical patient-level split CSV has been removed from the current public branch because it contained patient identifiers and local paths. Git history may still retain earlier copies; further history cleanup requires separate review. Raw thermography images and model checkpoints are not distributed.
 
 ## Citation
 
