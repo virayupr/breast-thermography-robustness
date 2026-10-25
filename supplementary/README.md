@@ -1,32 +1,21 @@
-# ICVGIP 2026 — Supplementary materials
+# ICVGIP 2026 — Supplementary research materials
 
-**Accepted paper:** Beyond Clean Accuracy: Operating-Point Fragility under Image-Quality Shift in Breast Thermography  
+**Paper:** Beyond Clean Accuracy: Operating-Point Fragility under Image-Quality Shift in Breast Thermography  
 **Authors:** Rajeswari Kannan and Vivekanandan N
 
-## Available in this repository
+## Materials available here
 
-- [Original experimental Colab notebook](../breast-thermography-robustness.ipynb) — original author code, with historical execution outputs; inspect before running
-- [Clean vs quality-aware comparison](../clean_vs_quality_aware_comparison.csv)
-- [Multi-seed degradation summary](../multi_seed_degradation_summary.csv)
-- [Quality-augmented multi-seed summary](../quality_augmented_multiseed_summary.csv)
-- [Calibration summary](../final_calibration_summary.csv)
-- [Validation-selected thresholds](../validation_selected_thresholds.csv)
-- [Multi-seed AUC plot](../multiseed_auc_degradation.png)
-- [EfficientNet probability-shift plot](../efficientnet_b0_probability_shift.png)
-- [MobileNetV3 probability-shift plot](../mobilenetv3_small_probability_shift.png)
-- [ResNet-18 probability-shift plot](../resnet18_probability_shift.png)
-- Additional figures and the patient-split CSV are in the root; see the GitHub file listing.
-
-## Documentation
-
+- [Original experiment notebook](notebooks/original_author_notebook.ipynb) — original notebook with saved outputs, copied from the existing public repository; **not cleaned or independently rerun**
+- [Aggregate results tables](results/tables) — five verified summary CSVs
+- [Experimental figures](results/figures) — four verified PNG figures
 - [Reproducibility instructions](REPRODUCIBILITY.md)
 - [Data availability and privacy](DATA_AVAILABILITY.md)
 - [Audit and limitations](AUDIT.md)
 
-## Status and important limitations
+Additional original results remain at the repository root. The author's prepared local supplementary archive contains more files (16 aggregate tables and seven figures); **not all have been transferred to GitHub**.
 
-The repository contains substantive original research code and results, but it is **not a fully verified replication release**. The author's separate prepared local archive contains more aggregate CSVs and figures than are presently visible on GitHub. Exact software versions, a fresh end-to-end rerun and privacy/licensing review remain outstanding.
+## Important limitations
 
-The existing public `dataset_with_patient_split.csv` requires a privacy and dataset-license review. No clinical efficacy is claimed; the test cohort is small, and quality shifts were simulated.
+This is an archival code-and-results supplement, not a clean-room reproducibility certification. The notebook contains Google Drive paths and an operation involving `shutil.rmtree`; review all cells before running. No raw patient images or trained checkpoints are supplied. The public root-level `dataset_with_patient_split.csv` still needs a redistribution/privacy review. The test set is small and quality degradations were simulated.
 
-**Repository URL:** https://github.com/virayupr/breast-thermography-robustness
+**Repository:** https://github.com/virayupr/breast-thermography-robustness
