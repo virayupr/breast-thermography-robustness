@@ -18,6 +18,10 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install aggregate verification dependencies
-        run: python -m pip install numpy pandas
+        run: python -m pip install numpy pandas scikit-learn openpyxl
       - name: Check archive hashes, notebook outputs, and summary arithmetic
         run: python release/verify_release.py
+      - name: Check private dataset validator syntax and CLI
+        run: |
+          python -m py_compile release/validate_private_dataset.py
+          python release/validate_private_dataset.py --help
